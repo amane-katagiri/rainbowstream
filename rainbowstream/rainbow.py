@@ -760,7 +760,11 @@ def urlopen():
         else:
             for url in urls:
                 expanded_url = url['expanded_url']
-                webbrowser.open(expanded_url)
+                tid = re.search(r"^https?://twitter.com/.+/status/([0-9]+)$", expanded_url)
+                if tid:
+                    draw(t=t.statuses.show(id=int(tid.group(1))))
+                else:
+                    webbrowser.open(expanded_url)
     except:
         debug_option()
         printNicely(red('Sorry I can\'t open url in this tweet.'))
