@@ -1,3 +1,10 @@
+A Note about Twitter API Change
+--------------
+
+Sadly Twitter **is not supporting** Stream API anymore, and RainbowStream need extra work to switch over to Polling Strategy, with careful concern about RateLimit. Detail explaination here: https://github.com/orakaro/rainbowstream/issues/271
+
+If you want a client with a set of nice command but **without stream function**, go ahead with following instructions.
+
 Rainbow Stream
 --------------
 
@@ -13,7 +20,7 @@ and much more fun directly from terminal.
 This package is built on the `Python Twitter Tools`_ and the `Twitter API`_, and runs
 on Python (2.7.x and 3.x).
 
-Home page: http://www.rainbowstream.org/
+Home page: https://github.com/orakaro/rainbowstream
 
 Source code: https://github.com/DTVD/rainbowstream
 
